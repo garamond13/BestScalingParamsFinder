@@ -68,7 +68,7 @@ eta = p1, chi = p2
 Has to be satisfied: eta != 2  
 
 **Bicubic**  
-a = p1
+a = p1  
 Has to be satisfied: radius = 2  
 Blur is unused.  
 
