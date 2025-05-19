@@ -9,7 +9,8 @@ Images need to be 1 channel greyscale sRGB.
 Use `-h` or `--help` to print help about all options.  
 
 Example usage and output:
-```BestScalingParamsFinder.exe --ref-img ref.png --scld-img scld.png --kernel 9 --p1-lo -1.0 --p1-hi 0.0 --p1-i 0.1  
+```
+BestScalingParamsFinder.exe --ref-img ref.png --scld-img scld.png --kernel 9 --p1-lo -1.0 --p1-hi 0.0 --p1-i 0.1  
 R: 2.000000, B: 1.000000, P1: -1.000000, P2: 0.000000, SSIM: 0.982032554157652  
 R: 2.000000, B: 1.000000, P1: -0.900000, P2: 0.000000, SSIM: 0.986954348755108  
 R: 2.000000, B: 1.000000, P1: -0.800000, P2: 0.000000, SSIM: 0.990853317338708  
