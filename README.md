@@ -7,6 +7,7 @@ Uses [Chris Lomont SSIM implementation](https://github.com/ChrisLomont/SSIM).
 Input images are, scaled image that will be rescaled to reference image size, and the reference image.  
 Images need to be 1 channel greyscale sRGB.  
 Use `-h` or `--help` to print help about all options.  
+If you want to lock any of parameters set "-lo" and "-hi" to the same value and set "-i" to 0.0.  
 
 Example usage and output:
 ```
@@ -27,17 +28,17 @@ The best: R: 2.000000, B: 1.000000, P1: -0.300000, P2: 0.000000, SSIM: 0.9977762
 
 ## Special notes on some kernels and windows
 
-### Power of Cosine
+**Power of Cosine**  
 n = p1  
 Has to be satisfied: n >= 0  
 n = 0: Box window  
 n = 1: Cosine window  
 n = 2: Hann window  
 
-### Kaiser
+**Kaiser**  
 beta = p1  
 
-### Power of Garamond
+**Power of Garamond**  
 n = p1, m = p2  
 Has to be satisfied: n >= 0, m >= 0  
 n = 0: Box window  
@@ -47,7 +48,7 @@ m = 1: Garamond window
 n = 1, m = 1: Linear window  
 n = 2, m = 1: Welch window  
 
-### Power of Blackman
+**Power of Blackman**  
 a = p1, n = p2  
 Has to be satisfied: n >= 0  
 Has to be satisfied: if n != 1, a <= 0.16  
@@ -56,28 +57,28 @@ n = 1: Blackman window
 a = 0, n = 1: Hann window  
 a = 0, n = 0.5: Cosine window  
 
-### Generalized Normal Window (GNW)
+**Generalized Normal Window (GNW)**  
 s = p1, n = p2  
 Has to be satisfied: s != 0, n >= 0  
 n -> inf: Box window  
 n = 2: Gaussian window  
 
-### Said
+**Said**  
 eta = p1, chi = p2  
 Has to be satisfied: eta != 2  
 
-### Bicubic
+**Bicubic** 
 a = p1
 Has to be satisfied: radius = 2  
 Blur is unused.  
 
-### Modified FSR Kernel
+**Modified FSR Kernel**  
 b = p1, c = p2  
 Has to be satisfied: radius = 2, b != 0, b != 2, c != 0  
 Blur is unused.   
 c = 1: FSR kernel  
 
-### BC-Spline
+**BC-Spline**  
 b = p1, c = p2  
 Has to be satisfied: radius = 2  
 Blur is unused.
@@ -89,3 +90,7 @@ B = 1 / 3, C = 1 / 3: Mitchell kernel
 B = 12 / (19 + 9 * sqrt(2)), C = 113 / (58 + 216 * sqrt(2)): Robidoux kernel  
 B = 6 / (13 + 7 * sqrt(2)), C = 7 / (2 + 12 * sqrt(2)): RobidouxSharp kernel  
 B = (9 - 3 * sqrt(2)) / 7, C = 0.1601886205085204: RobidouxSoft kernel  
+
+## Compilation
+You can use Visual Studio.  
+No additional dependencies.  
